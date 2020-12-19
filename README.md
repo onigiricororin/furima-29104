@@ -36,6 +36,8 @@ Things you may want to cover:
 | nickname | string | null: false, unique: true |
 | birthday | date   | null: false |
 | email    | string | null: false, unique: true |
+| encrypted_password| string | null: false |
+
 
 ### Association
 
@@ -53,7 +55,7 @@ Things you may want to cover:
 | category_id  | integer    | null: false |
 | condition_id | integer    | null: false |
 | burden_id    | integer    | null: false |
-| area_id      | integer    | null: false |
+| prefecture_id| integer    | null: false |
 | days_to_ship_id | integer | null: false |
 
 ### Association
@@ -80,7 +82,7 @@ Things you may want to cover:
 | -------     | ---------- | ------------------------------ |
 | order       | references | null: false, foreign_key: true |
 | postal_code | string     | null: false      |
-| prefecture  | integer    | null: false      |
+| prefecture_id | integer  | null: false      |
 | city        | string     | null: false      |
 | house_number| string     | null: false      |
 | building_name| string    |                  |
