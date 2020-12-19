@@ -29,12 +29,13 @@ Things you may want to cover:
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string | null: false |
-| furigana | string | null: false |
+| last_name  | string | null: false |
+| first_name | string | null: false |
+| last_read_name  | string | null: false |
+| first_read_name | string | null: false |
 | nickname | string | null: false, unique: true |
 | birthday | date   | null: false |
 | email    | string | null: false, unique: true |
-| password | string | null: false |
 
 ### Association
 
@@ -48,7 +49,6 @@ Things you may want to cover:
 | user        | references  | null: false, foreign_key: true |
 | name        | string      | null: false |
 | summary     | text        | null: false |
-| image       | string      | null: false |
 | price       | integer     | null: false |
 | category_id  | integer    | null: false |
 | condition_id | integer    | null: false |
@@ -83,8 +83,8 @@ Things you may want to cover:
 | prefecture  | integer    | null: false      |
 | city        | string     | null: false      |
 | house_number| string     | null: false      |
-| building_name| string    | null: false      |
-| phone_number | integer   | null: false      |
+| building_name| string    |                  |
+| phone_number | string    | null: false      |
 
 
 ### Association
