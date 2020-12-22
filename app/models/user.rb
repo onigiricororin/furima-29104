@@ -11,7 +11,6 @@ class User < ApplicationRecord
     validates :first_read_name, format: {with: /\A[ァ-ヶー－]+\z/, message: "は全角カタカナで入力してください"}
     validates :nickname
     validates :birthday
-    validates :email
     validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,100}\z/i ,
               message: "は半角英数字混合で入力してください。"} 
   end        
