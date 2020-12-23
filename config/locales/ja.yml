@@ -1,0 +1,13 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       last_name: 苗字
+       first_name: 名前
+       last_read_name: 苗字のフリガナ 
+       first_read_name: 名前のフリガナ
+       birthday: 誕生日
+       email: Eメール
+       password: パスワード
+       password confirmation: 確認用パスワード
