@@ -11,10 +11,10 @@ class Item < ApplicationRecord
 
 
   with_options presence: true do
+    validates :image
     validates :name
     validates :summary
     validates :price, numericality: {greater_than: 300, less_than: 9999999 } 
-    validates :image
 
     with_options numericality: { other_than: 1, message: "が入力されていません"} do
       validates :category_id
