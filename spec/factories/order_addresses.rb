@@ -8,6 +8,7 @@ FactoryBot.define do
     phone_number    {Faker::PhoneNumber.cell_phone.to_i}
     user_id         {Faker::Number.unique.number(1)}
     item_id         {Faker::Number.unique.number(1)}
+    token           {"EjHsthSNWVcq8TatNrZcjCcpZB2De86KBAesy3gnBIKb8xQZMV0Lb+G+/2EsviSlt6YXHMVnGiT1pBbmFP4FNg=="}
   end
 end
 
