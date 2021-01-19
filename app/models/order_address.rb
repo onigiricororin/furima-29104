@@ -10,8 +10,7 @@ class OrderAddress
     validates :prefecture_id,numericality: { other_than: 1, message: "が入力されていません"}
     validates :city
     validates :house_number
-    validates :phone_number, exclusion: { in: %w(-),message: "ハイフンを含まないでください"},
-                             length: { maximum: 11, message: "11文字以内で入力してください" }
+    validates :phone_number, format: { with: /\A\d{11}\z/, message: "は半角数字11文字以内で入力してください。"} 
   end
 
   def save

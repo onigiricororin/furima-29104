@@ -5,9 +5,7 @@ FactoryBot.define do
     city            {Faker::Address.city}
     house_number    {Faker::Address.street_address}
     building_name   {Faker::Name.name}
-    phone_number    {Faker::PhoneNumber.cell_phone.to_i}
-    user_id         {Faker::Number.unique.number(1)}
-    item_id         {Faker::Number.unique.number(1)}
+    phone_number    {12345678910}
     token           {"EjHsthSNWVcq8TatNrZcjCcpZB2De86KBAesy3gnBIKb8xQZMV0Lb+G+/2EsviSlt6YXHMVnGiT1pBbmFP4FNg=="}
   end
 end
