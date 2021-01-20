@@ -9,5 +9,6 @@ FactoryBot.define do
     burden_id        {2}   
     prefecture_id    {2}
     days_to_ship_id  {2}
+    id               {Faker::Number.unique.number(1)}
   end
 end

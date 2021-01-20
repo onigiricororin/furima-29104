@@ -9,5 +9,6 @@ FactoryBot.define do
     password        {"1234qwer"}
     password_confirmation  { password }
     birthday        {Date.new(2000, 11, 12)}
+    id              {Faker::Number.unique.number(1)}
   end
 end
