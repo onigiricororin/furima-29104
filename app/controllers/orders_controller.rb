@@ -22,8 +22,10 @@ class OrdersController < ApplicationController
  def item_find
   @item = Item.find(params[:item_id])
     if @item.order.nil?
-      if @item.user_id == current_user.id
+      if !@item.user_id == current_user.id
         render :index
+      else
+        redirect_to root_path
       end
     else
       redirect_to root_path
