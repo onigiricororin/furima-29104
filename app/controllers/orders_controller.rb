@@ -3,7 +3,15 @@ class OrdersController < ApplicationController
   before_action :item_find
 
  def index
-  @order_address = OrderAddress.new
+  if @item.order.nil?
+    if @item.user.id == current_user.id
+      redirect_to root_path
+    else
+      @order_address = OrderAddress.new
+    end
+  else
+    redirect_to root_path
+  end
  end
 
  def create
@@ -21,15 +29,6 @@ class OrdersController < ApplicationController
 
  def item_find
   @item = Item.find(params[:item_id])
-    if @item.order.nil?
-      if !@item.user_id == current_user.id
-        render :index
-      else
-        redirect_to root_path
-      end
-    else
-      redirect_to root_path
-    end
  end
 
 
